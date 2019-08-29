@@ -32,7 +32,7 @@ for($i = 1; $i <= 10; ++$i) echo $i . ' ';
 
 echo '<h1>Do While Loop</h1>';
 echo '<pre style="background: #e9edf0; padding: 30px">
-$i = 0;
+$i = 1;
 
 do {
 	echo $i;
@@ -40,7 +40,7 @@ do {
 } while ($i <= 10);
 </pre>';
 
-$i = 0;
+$i = 1;
 
 do {
 	echo $i . ' ';
@@ -51,7 +51,7 @@ do {
 echo '<h1>While Loop</h1>';
 
 echo '<pre style="background: #e9edf0; padding: 30px">
-$i = 0;
+$i = 1;
 
 while ($i <= 10) {
 	echo $i;
@@ -60,7 +60,7 @@ while ($i <= 10) {
 
 </pre>';
 
-$i = 0;
+$i = 1;
 
 while ($i <= 10) {
 	echo $i . ' ';
