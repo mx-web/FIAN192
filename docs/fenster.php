@@ -1,9 +1,9 @@
 <?php
 
-$Breite = 40;
+$Breite = 15;
 $Hoehe = 15;
 
-echo '<pre>';
+echo '<pre style="line-height: 7px">';
 for($h = 1; $h <= $Hoehe; $h++) {
 	switch ($h) {
 		case '1':
