@@ -1,23 +1,23 @@
 <pre>
 <?php
 
-/* function drawX($wiederholungen, $hoehe) {
-    $abstandInner = $hoehe * 2;
+function drawX($wiederholungen, $hoehe) {
+    $abstandInner = $hoehe;
     $abstandOuter = 0;
 
-    for($y = 0; $y <= $hoehe * 2; $y++) {
+    for($y = 0; $y <= $hoehe; $y++) {
 
         echo '<div style="display: inline-block; width: 20px">'.$y.'</div>';
         
         
 
-        if($y < ($hoehe)) {
+        if($y < ($hoehe / 2)) {
 
-            for($i = 0; $i <= $wiederholungen; $i++) {
-                echo str_repeat(" ", $abstandOuter);
-                echo '#';
+            for($i = 1; $i <= $wiederholungen; $i++) {
+                echo str_repeat(" ", $abstandOuter );
+                echo 'X';
                 echo str_repeat(" ", $abstandInner);
-                echo '#   ';
+                echo 'X';
                 echo str_repeat(" ", $abstandOuter);
             }
 
@@ -26,29 +26,32 @@
 
             echo '<br>';
         } else {
+            for($i = 1; $i <= $wiederholungen; $i++) {
+                echo str_repeat(" ", $abstandOuter );
+                echo 'X';
 
-        for($i = 0; $i <= $wiederholungen; $i++) {
-            echo str_repeat(" ", $abstandOuter);
-            echo '#';
-            echo str_repeat(" ", $abstandInner);
-            echo '#   ';
-            echo str_repeat(" ", $abstandOuter);
+                echo str_repeat(" ", $abstandInner );
+                echo 'X';
+
+                echo str_repeat(" ", $abstandOuter );
+
+
+            }
+
+            $abstandOuter--;
+            $abstandInner = $abstandInner + 2;
+            echo '<br>';
         }
-
-        $abstandInner = $abstandInner + 2;
-        $abstandOuter--;
-
-        echo '<br>';
-        }
+    
         
     }
 }
 
-drawX(12, 12); */
+drawX(7, 15); 
 
 
 
-/* function drawH($wiederholungen, $hoehe) {
+ function drawH($wiederholungen, $hoehe) {
     if($hoehe % 2 == 0) $hoehe++;
     $abstandInner = $hoehe;
 
@@ -76,21 +79,9 @@ drawX(12, 12); */
     }
 }
 
-drawH(6, 15); */
+drawH(7, 15);
 
 
-
-
-
-
-
-
-     #
-    # #
-   #   #
-  #######
- #       #
-#         #
 
 
 function drawA($wiederholungen, $hoehe) {
@@ -104,19 +95,18 @@ function drawA($wiederholungen, $hoehe) {
 
 
         for($w = 1; $w <= $wiederholungen; $w++) {
-            echo str_repeat('0', $abstandOuter);
-            echo '#';
+            echo str_repeat(' ', $abstandOuter);
+            echo 'X';
 
-            if($y == ($hoehe / 2) + 1) {
-            echo str_repeat('#', $abstandInner);
-            echo '#';
+            if($y == round($hoehe / 2, 0)) {
+            echo str_repeat('X', $abstandInner);
+            echo 'X';
             } else {
-                echo str_repeat('0', $abstandInner);
-                echo '#';
+                echo str_repeat(' ', $abstandInner);
+                echo 'X';
             }
         
-            echo str_repeat('0', $abstandOuter);
-
+            echo str_repeat(' ', $abstandOuter);
            
         }
 
@@ -127,4 +117,4 @@ function drawA($wiederholungen, $hoehe) {
     }
 }
 
-drawA(6, 20);
+drawA(7, 15);
